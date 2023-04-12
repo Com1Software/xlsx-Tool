@@ -33,8 +33,8 @@ func main() {
 		fmt.Printf("Sheet List %s\n", sheetlist)
 
 		for x, sheet := range f.GetSheetList() {
-			
- 	fmt.Printf("Sheet %s\n", sheet)
+
+			fmt.Printf("Sheet %d %s\n", x, sheet)
 		}
 		//}
 		//-------------------------------------------------------------
