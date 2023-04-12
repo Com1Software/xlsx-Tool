@@ -14,9 +14,9 @@ func main() {
 	switch {
 	//-------------------------------------------------------------
 	case len(os.Args) == 2:
-		cmd := os.Args[1]
-		fmt.Printf("cmd %s\n", cmd)
-		f, err := excelize.OpenFile("Book1.xlsx")
+		file := os.Args[1]
+		fmt.Printf("File : %s\n", file)
+		f, err := excelize.OpenFile(file)
 		if err != nil {
 			fmt.Println(err)
 			return
@@ -28,12 +28,9 @@ func main() {
 			}
 		}()
 		// Get value from cell by given worksheet name and cell reference.
-		cell, err := f.GetCellValue("Sheet1", "B2")
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-		fmt.Println(cell)
+		sheetlist := f.GetSheetList()
+
+		fmt.Printf("Sheet List %s\n", sheetlist)
 
 		//}
 		//-------------------------------------------------------------
