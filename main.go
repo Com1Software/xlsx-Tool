@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Printf("C1Script\n")
+	fmt.Printf("xlsx Tool\n")
 	fmt.Printf("Operating System : %s\n", runtime.GOOS)
 	//	args := os.Args
 	switch {
